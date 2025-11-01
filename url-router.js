@@ -149,9 +149,3 @@ window.addEventListener("DOMContentLoaded", () => {
   
   urlLocationHandler(); // URL'deki HASH'e göre doğru sayfayı yükle
 });
-// !!! BURAYA KENDİ GOOGLE AI API KEY'İNİ YAPIŞTIR !!!
-const API_KEY = "AIzaSyBvNvEYKk5n5fu5SDFduJkhmmcHLqRmkEk";
-// -----------------------------------------------------------------
-
-// --- DÜZELTME: API_URL SENİN ÇALIŞAN KODUNDAN ALINDI ---
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite-preview-06-17:generateContent?key=${API_KEY}`;
