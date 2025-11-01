@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-lang="app_title">Echoes of History</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body class="dark-mode"> 
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="#/" class="logo" data-lang="app_title">Echoes of History</a>
+        <ul class="nav-links" id="anaNavLinks">
+          <li><a href="#/" class="nav-link" data-nav-key="home" data-lang="nav_home">Ana Sayfa</a></li>
+          <li class="nav-item-auth" style="display: none;">
+            <a href="#/history" class="nav-link" data-nav-key="history" data-lang="nav_history">Sohbet Geçmişi</a>
+          </li>
+          <li class="nav-item-auth" style="display: none;">
+            <a href="#/settings" class="nav-link" data-nav-key="settings" data-lang="nav_settings">Ayarlar</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="nav-right">
+        <div class="nav-buttons" id="kimlikButonlari">
+          <a href="#/login" class="btn btn-outline" data-lang="nav_login">Giriş Yap</a>
+          <a href="#/login" class="btn" id="registerBtn" data-lang="nav_register">Kaydol</a>
+        </div>
+
+        <div class="profil-menu-alani" id="profilMenuAlani" style="display: none;">
+          <button class="profil-avatar" id="profilAvatarBtn">
+              <img src="" alt="Profil" id="menuAvatarImg" />
+          </button>
+          <div class="dropdown-menu" id="profilDropdown">
+            <div class="dropdown-header">
+              <strong id="dropdownKullaniciAdi"></strong>
+              <span id="dropdownKullaniciEposta"></span>
+            </div>
+            <a href="#/settings" class="dropdown-item" id="profilDuzenleLink">
+              <i class="fas fa-user-edit"></i> <span data-lang="nav_edit_profile">Profili Düzenle</span>
+            </a>
+            <button class="dropdown-item-danger" id="cikisYapButonu">
+              <i class="fas fa-sign-out-alt"></i> <span data-lang="nav_logout">Çıkış Yap</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="toggles">
+          <button id="trBtn" title="Türkçe">TR</button>
+          <button id="enBtn" title="English">EN</button>
+          <button id="darkBtn" title="Karanlık Mod">🌙</button>
+          <button id="lightBtn" title="Aydınlık Mod">☀️</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content"></main>
+
+  <div id="personaModal" class="modal-overlay" style="display: none;">
+      <div class="modal-content">
+          <button class="modal-close" id="modalCloseBtn">&times;</button>
+          <div class="profile-card">
+              <div class="profile-header">
+                  <img src="" alt="Profil Resmi" id="modal-img" />
+                  <h2 id="modal-name"></h2>
+                  <p id="modal-meta"></p>
+              </div>
+              <div class="profile-details">
+                  
+                  <div class="detail-item">
+                      <span data-lang="profile_bio">Tarihçe</span>
+                      <em id="modal-bio"></em>
+                  </div>
+                  <div class="detail-item">
+                      <span data-lang="profile_knowledge">Bilgi Sınırı</span>
+                      <strong id="modal-knowledge"></strong>
+                  </div>
+                  <div class="detail-item">
+                      <span data-lang="profile_style">Konuşma Tarzı</span>
+                      <em id="modal-style"></em>
+                  </div>
+                  <div class="detail-item">
+                      <span data-lang="profile_sources">Kaynaklar</span>
+                      <div id="modal-sources"></div>
+                  </div>
+              </div>
+              <a href="#" class="btn btn-large" id="modal-start-chat-btn" data-lang="profile_start_chat">Sohbete Başla</a>
+          </div>
+      </div>
+  </div>
+
+  <script src="url-router.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

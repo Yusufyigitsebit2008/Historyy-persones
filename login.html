@@ -1,0 +1,26 @@
+<div class="login-page">
+  <div class="auth-container">
+    <input type="checkbox" id="authChk" aria-hidden="true" />
+    
+    <div class="auth-signup">
+      <form id="kayitFormu">
+        <label for="authChk" data-lang="login_register_title">Kayıt Ol</label>
+        <input type="text" data-lang="login_name" placeholder="İsim" id="kayitIsim" required />
+        <input type="text" data-lang="login_lastname" placeholder="Soyisim" id="kayitSoyisim" required />
+        <input type="email" data-lang="login_email" placeholder="E-posta" id="kayitEposta" required />
+        <input type="password" data-lang="login_password" placeholder="Şifre" id="kayitSifre" required />
+        <input type="url" data-lang="login_avatar_url" placeholder="Profil Fotoğrafı URL (Opsiyonel)" id="kayitAvatar" />
+        <button type="submit" class="btn" data-lang="login_register_title">Kayıt Ol</button>
+      </form>
+    </div>
+
+    <div class="auth-login">
+      <form id="girisFormu">
+        <label for="authChk" data-lang="login_login_title">Giriş Yap</label>
+        <input type="email" data-lang="login_email" placeholder="E-posta" id="girisEposta" required />
+        <input type="password" data-lang="login_password" placeholder="Şifre" id="girisSifre" required />
+        <button type="submit" class="btn" data-lang="nav_login">Giriş Yap</button>
+      </form>
+    </div>
+  </div>
+</div>

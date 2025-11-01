@@ -1,0 +1,55 @@
+<div class="page-container chat-page-container" id="chat-page">
+  
+  <aside class="persona-panel">
+    <div class="persona-info-top">
+        <img src="" alt="Avatar" id="persona-panel-img" />
+        <h3 id="persona-panel-name"></h3>
+        <p id="persona-panel-meta"></p>
+        <span id="persona-panel-cutoff"></span>
+    </div>
+    <div class="chat-controls">
+        <button id="new-chat-btn" class="btn btn-full">
+            <i class="fas fa-plus"></i> <span data-lang="chat_new_chat">Yeni Sohbet</span>
+        </button>
+        <button id="change-persona-btn" class="btn btn-outline btn-full">
+            <i class="fas fa-users"></i> <span data-lang="chat_change_persona">Kişilik Değiştir</span>
+        </button>
+        <button id="settings-btn" class="btn btn-outline btn-full">
+            <i class="fas fa-cog"></i> <span data-lang="nav_settings">Ayarlar</span>
+        </button>
+    </div>
+  </aside>
+  
+  <div class="chat-main">
+    <header class="chat-header">
+      <img src="" alt="Avatar" id="chat-header-img" />
+      <div class="chat-header-info">
+        <h3 id="chat-header-name"></h3>
+        <p id="chat-header-meta"></p>
+      </div>
+    </header>
+
+    <div class="chat-messages" id="chat-messages">
+      </div>
+
+    <div class="typing-indicator" id="typing-indicator">
+      <span id="typing-name"></span>...
+    </div>
+
+    <form class="chat-input-form" id="chat-form">
+      <button type="button" class="btn-icon" id="mic-btn" title="Sesli Giriş (Yakında)">
+        <i class="fas fa-microphone"></i>
+      </button>
+      <input
+        type="text"
+        id="chat-input"
+        data-lang="chat_placeholder"
+        placeholder="Mesajınızı yazın..."
+        autocomplete="off"
+      />
+      <button type="submit" class="btn-send" title="Gönder">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+</div>

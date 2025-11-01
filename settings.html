@@ -1,0 +1,57 @@
+<div class="page-container" id="settings-page">
+  <h1 data-lang="settings_title">Ayarlar</h1>
+
+  <section class="setting-group" id="profilGuncellemeGrubu">
+    <h3 data-lang="settings_profile_title">Profil Bilgileri</h3>
+    <form class="profil-duzenle-form" id="profilDuzenleFormu">
+      <div class="form-grup">
+        <label for="profilIsim" data-lang="settings_name">İsim</label>
+        <input type="text" id="profilIsim" />
+      </div>
+      <div class="form-grup">
+        <label for="profilSoyisim" data-lang="settings_lastname">Soyisim</label>
+        <input type="text" id="profilSoyisim" />
+      </div>
+      <div class="form-grup">
+        <label for="profilEposta" data-lang="login_email">E-posta</label>
+        <input type="email" id="profilEposta" />
+      </div>
+      <div class="form-grup">
+        <label for="profilAvatarUrl" data-lang="settings_avatar_url">Profil Fotoğrafı URL</label>
+        <input type="url" id="profilAvatarUrl" placeholder="https://..." />
+      </div>
+      <button type="submit" class="btn" data-lang="settings_update_btn">Bilgileri Güncelle</button>
+    </form>
+  </section>
+
+  <section class="setting-group">
+    <h3 data-lang="settings_theme_title">Görünüm</h3>
+    <div class="btn-group" id="theme-group">
+      <button data-value="light" id="theme-light" data-lang="settings_theme_light">☀️ Aydınlık</button>
+      <button data-value="dark" id="theme-dark" data-lang="settings_theme_dark">🌙 Karanlık</button>
+    </div>
+  </section>
+
+  <section class="setting-group">
+    <h3 data-lang="settings_history_title">Sohbet Geçmişi</h3>
+    <div class="setting-item">
+      <span data-lang="settings_history_desc">Tüm sohbet geçmişini kalıcı olarak sil.</span>
+      <button class="btn btn-danger" id="clear-history-btn" data-lang="settings_history_btn">Tüm Geçmişi Sil</button>
+    </div>
+  </section>
+  
+  <section class="setting-group">
+    <h3 data-lang="settings_delete_title">Hesabı Sil</h3>
+    <div class="setting-item">
+      <span data-lang="settings_delete_desc">Hesabınızı ve tüm verilerinizi kalıcı olarak silin.</span>
+      <button class="btn btn-danger" id="hesapSilmeyiAcBtn" data-lang="settings_delete_btn">Hesabı Sil</button>
+    </div>
+    
+    <form class="hesap-sil-form" id="hesapSilFormu" style="display: none;">
+        <p data-lang="settings_delete_confirm_title">Hesabınızı silmek için lütfen e-posta ve şifrenizi doğrulayın.</p>
+        <input type="email" id="silEposta" data-lang="login_email" placeholder="E-posta" required />
+        <input type="password" id="silSifre" data-lang="login_password" placeholder="Şifre" required />
+        <button type="submit" class="btn btn-danger" data-lang="settings_delete_confirm_btn">Hesabımı Kalıcı Olarak Sil</button>
+    </form>
+  </section>
+</div>
